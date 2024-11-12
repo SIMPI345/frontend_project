@@ -10,11 +10,7 @@
 <body>
   <div class="container">
     <h2 class="mt-5">Register</h2>
-    <form action="#" method="POST">
-      <div class="mb-3">
-        <label for="fullname" class="form-label">Full Name</label>
-        <input type="text" class="form-control" id="fullname" name="fullname" required>
-      </div>
+    <form id="registerForm">
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
         <input type="email" class="form-control" id="email" name="email" required>
@@ -27,5 +23,23 @@
     </form>
     <p class="mt-3">Already have an account? <a href="login.html">Login here</a></p>
   </div>
+
+  <script>
+    // Handle form submission
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Get the email and password from the form
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      // Store the email and password in localStorage
+      localStorage.setItem('userEmail', email);
+      localStorage.setItem('userPassword', password);
+
+      alert('Registration Successful!');
+      window.location.href = 'login.html'; // Redirect to login page
+    });
+  </script>
 </body>
 </html>
