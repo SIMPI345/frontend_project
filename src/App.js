@@ -1,33 +1,24 @@
 // src/App.js
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import { Modal } from 'react-bootstrap';
-import AppHeader from './components/AppHeader';
-import RegisterModal from './components/RegisterModal';
-import LoginModal from './components/LoginModal';
+import { Button, Container, Row, Col } from 'react-bootstrap';
 
 const App = () => {
-  const [showRegister, setShowRegister] = useState(false);
-  const [showLogin, setShowLogin] = useState(false);
-
-  const handleRegisterModalShow = () => setShowRegister(true);
-  const handleRegisterModalClose = () => setShowRegister(false);
-
-  const handleLoginModalShow = () => setShowLogin(true);
-  const handleLoginModalClose = () => setShowLogin(false);
-
   return (
     <div className="App">
-      <AppHeader
-        showRegisterModal={handleRegisterModalShow}
-        showLoginModal={handleLoginModalShow}
-      />
-
-      {/* Register Modal */}
-      <RegisterModal show={showRegister} handleClose={handleRegisterModalClose} />
-
-      {/* Login Modal */}
-      <LoginModal show={showLogin} handleClose={handleLoginModalClose} />
+      <Container className="my-5">
+        <Row className="justify-content-center">
+          <Col md={6}>
+            <h1>Welcome to Our App</h1>
+            <Button variant="primary" href="login.html" className="mx-2">
+              Login
+            </Button>
+            <Button variant="secondary" href="register.html" className="mx-2">
+              Register
+            </Button>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
