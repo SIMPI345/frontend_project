@@ -8,7 +8,7 @@ In the register form, add fullname, contact, date of birth, email id, password, 
 
 
 ## Summary of Changes:
-#### Modular Structure:
+#### REact Based Modular Structure: --> src directory
 
 We split the code into multiple smaller components: RegisterModal, LoginModal, and AppHeader.
 State Management:
@@ -21,6 +21,7 @@ Reusability:
 
 Each modal is a reusable component that can be controlled externally (via the handleShow and handleClose props).
 
+#### HTML/BOOTSTRAP/CSS Based Modular Structure: --> public directory
 
 ```npx create-react-app fontened_project
 cd fontened_project
