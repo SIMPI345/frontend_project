@@ -20,3 +20,15 @@ The App component acts as the container that manages the modals and renders the 
 Reusability:
 
 Each modal is a reusable component that can be controlled externally (via the handleShow and handleClose props).
+
+
+```npx create-react-app fontened_project
+cd fontened_project
+npm install react-bootstrap bootstrap
+npm start
+```
+## Link to page
+```
+http://localhost:3000
+
+```
