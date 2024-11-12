@@ -5,3 +5,18 @@ In the register form, add fullname, contact, date of birth, email id, password, 
 <img width="1957" alt="image" src="https://github.com/user-attachments/assets/dcc86671-4cb1-40e6-ba52-1094d83efa2c">
 
 ```
+
+
+## Summary of Changes:
+#### Modular Structure:
+
+We split the code into multiple smaller components: RegisterModal, LoginModal, and AppHeader.
+State Management:
+
+States for modals (showRegister, showLogin) and form data are managed inside the individual modal components.
+Main App:
+
+The App component acts as the container that manages the modals and renders the header with the buttons.
+Reusability:
+
+Each modal is a reusable component that can be controlled externally (via the handleShow and handleClose props).
